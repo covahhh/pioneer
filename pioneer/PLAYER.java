@@ -14,6 +14,9 @@ public class PLAYER extends Actor
     private  GreenfootImage img_kousin1 = null;
     int life=100;
     int count=0;
+    static int x;
+    static int y;
+    
     public PLAYER()
     {
          img_right1 =  new GreenfootImage( "images/right1.png" );
@@ -29,8 +32,9 @@ public class PLAYER extends Actor
     public void act() 
     {
         
-        int x = getX();
-        int y = getY();
+        x = getX();
+        y = getY();
+        
         //getImage().scale( 100, 100 );
         if( Greenfoot.isKeyDown( "right" ) ){
             setLocation( x+2,y );
@@ -54,8 +58,9 @@ public class PLAYER extends Actor
           
         }
         Actor actor = getOneObjectAtOffset( 0, 0, enemy.class );
-        
-        if( actor != null ){
+        Actor actor2 = getOneObjectAtOffset( 0, 0, enemy_1.class );
+        Actor actor3 = getOneObjectAtOffset( 0, 0, enemy_2.class );
+        if( actor != null ||actor2 != null||actor3 != null){
         if( life <= 0 ){  
             World game = new GAMEOVERWorld();
             Greenfoot.setWorld( game );

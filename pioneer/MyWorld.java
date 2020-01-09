@@ -13,7 +13,11 @@ public class MyWorld extends World
     Actor player = null;
     Actor enemy  = null;
     Actor enemy_1  = null;
+    Actor enemy_1_2  = null;
+    Actor enemy_1_3  = null;
     Actor enemy_2  = null;
+    Actor enemy_2_2  = null;
+    Actor enemy_2_3  = null;
     String[][] nowWorld = new String[2][2];
     int xW=0;
     int yW=0;
@@ -29,20 +33,32 @@ public class MyWorld extends World
        
         enemy= new enemy();
         enemy_1=new enemy_1();
+        enemy_1_2=new enemy_1();
+        enemy_1_3=new enemy_1();
         enemy_2=new enemy_2();
+        enemy_2_2=new enemy_2();
+        enemy_2_3=new enemy_2();
         
         addObject( enemy_1, 500, 300 ); 
-        addObject( enemy_2, 500, 100 ); 
-                        
+        addObject( enemy_1_2, 500, 400 ); 
+        addObject( enemy_1_3, 400, 320 );
+        
+        
+        addObject( enemy_2, 500, 160 ); 
+        addObject( enemy_2_2, 300, 150 );
+        addObject( enemy_2_3, 440, 60 ); 
+        
         player = new PLAYER();
         addObject( player, 300, 200 );
-
 
        // GreenfootImage img1 = new GreenfootImage( "images/background1.png" );
 
         GreenfootImage img1 = new GreenfootImage( "images/background4.png" );
 
+
         //GreenfootImage img1 = new GreenfootImage( "images/background1.png" );
+
+        
 
         img1.scale(600,435);
         getBackground().drawImage( img1, 0, 0 );
