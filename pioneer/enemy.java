@@ -12,25 +12,54 @@ public class enemy extends Actor
      * Act - do whatever the enemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    int count=0,count2=1;
+    
+    private  GreenfootImage left  = null;
+    private  GreenfootImage right = null;
+    
+    public enemy()
     {
-       /*if( Greenfoot.isKeyDown( "" ) ){
-        setRotation(0);
-        move(1);
-       }*/
-       /* for(int j=600;j>0;j--)
-        {
- 
-            setRotation(0);
-            move(1);
-            for(int k=0;k<=60000;k++);
-        }
-        for(int i=0;i<=600;i++)
-        {
-             setRotation(0);
-             move(1);
-             for(int k=0;k<=60000;k++);
-        }*/
-        // Add your action code here.
+         left  =  new GreenfootImage( "images/enemy2.png" );
+         right =  new GreenfootImage( "images/enemy3.png" );
+        
+    }
+    
+    
+    public void act() 
+    { 
+        int x = getX();
+        int y = getY();
+
+            
+  
+            if(count2<=5)
+            {
+                setImage(right);
+                if(count<6)setLocation( x,y+3 );
+                else if(count<12)setLocation( x,y-3 );
+                else if(count<24)setLocation( x-6,y );
+                count++;
+                if(count==24) 
+                {
+                    count=0;
+                    count2++;
+                }
+            }
+            else
+            {
+               setImage(left);
+               if(count<6)setLocation( x,y+3 );
+               else if(count<12)setLocation( x,y-3 );
+               else if(count<24)setLocation( x+6,y );
+               count++;
+               if(count==24) 
+                {
+                    count=0;
+                    count2++;
+                    if(count2>10)count2=1;
+                }
+            }
+        
+           
     }    
 }
