@@ -16,6 +16,9 @@ public class PLAYER extends Actor
     int count=0;
     static int x;
     static int y;
+    static int h;
+    static int h1;
+    static int block[] =new int[4];
     
     public PLAYER()
     {
@@ -34,32 +37,39 @@ public class PLAYER extends Actor
         
         x = getX();
         y = getY();
+        int a =0;
         
         //getImage().scale( 100, 100 );
         if( Greenfoot.isKeyDown( "right" ) ){
             setLocation( x+2,y );
+            if(hit())
+               setLocation( x,y );
             setImage(img_right1);
                      
         }
         if( Greenfoot.isKeyDown( "left" ) ){
             setLocation( x-2,y );
+            if(hit())
+               setLocation( x,y );
             setImage(img_hidari1);
            
         }
         if( Greenfoot.isKeyDown( "up" ) ){
             setLocation( x,y-2 );
+            if(hit())
+               setLocation( x,y );
             setImage(img_back1);
-           
-            
         }
         if( Greenfoot.isKeyDown( "down" ) ){
-        setLocation( x,y+2 );
+           setLocation( x,y+2 );
+           if(hit())
+               setLocation( x,y );
            setImage(img_kousin1);
-          
         }
         Actor actor = getOneObjectAtOffset( 0, 0, enemy.class );
         Actor actor2 = getOneObjectAtOffset( 0, 0, enemy_1.class );
         Actor actor3 = getOneObjectAtOffset( 0, 0, enemy_2.class );
+        
         if( actor != null ||actor2 != null||actor3 != null){
         /*if( life <= 0 ){  
             World game = new GAMEOVERWorld();
@@ -71,23 +81,30 @@ public class PLAYER extends Actor
             Greenfoot.playSound("sounds/gusari.mp3");
          //}
         }
+<<<<<<< HEAD
         if( life <= 0 ){  
             World game = new GAMEOVERWorld();
             Greenfoot.setWorld( game );
             //getWorld().showText( "GAME OVER", 300, 300 );
             Greenfoot.stop();
          }
+=======
+    
+>>>>>>> e80241da6c6a707baabd8a600ea6a8c23315c932
         String s=String.valueOf(life);
         getWorld().showText( "HP"+s, 100, 350 );
       }  
-       
+      
+      
+       public boolean hit(){
+         Actor actorB1 = getOneIntersectingObject(Block.class );
+      if(actorB1 != null){
+           return true;
+        }
+        return false;
+    }
        
 }    
-        
-       /* if(getX() == 0 || getX() == 400){
-            
-        }*/
-            
  
     
 

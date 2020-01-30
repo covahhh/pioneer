@@ -25,6 +25,14 @@ public class enemy_1 extends Actor
         int x = getX();
         int y = getY();
 
+<<<<<<< HEAD
+=======
+
+        setLocation( x-2,y );
+            
+
+
+>>>>>>> e80241da6c6a707baabd8a600ea6a8c23315c932
         int speed=1;
         //if     ((xp<x+5)&&(xp>x-5)) speed=2;
         //else                          speed=1;
@@ -32,6 +40,12 @@ public class enemy_1 extends Actor
         if(yp<y)        y=y-speed;
         else if(yp>y)   y=y+speed;
         
+
+        setLocation(x,y);
+        
+
+ 
+
         if(xp<x)        
         {
             x=x-speed;
