@@ -22,6 +22,9 @@ public class MyWorld extends World
     String[][] nowWorld = new String[2][2];
     int xW=0;
     int yW=0;
+    boolean ene2set= true;
+    boolean ene2_2set= true;
+    boolean ene2_3set= true;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -50,6 +53,7 @@ public class MyWorld extends World
         
         player = new PLAYER();
 
+
         addObject( player, 10, 200 );
         GreenfootImage img1 = new GreenfootImage( "images/background4.png" );
 
@@ -61,8 +65,16 @@ public class MyWorld extends World
     
      public void act() 
     {
-            int x = player.getX();
-            int y = player.getY();
+            int x    = player.getX();
+            int y    = player.getY();
+            int enex=0; 
+            int enex2=0; 
+            int enex3=0; 
+            if(ene2set==true)   enex  = enemy_2.getX();
+            if(ene2_2set==true) enex2 = enemy_2_2.getX();
+            if(ene2_3set==true) enex3 = enemy_2_3.getX();
+            
+            
             
             if(x == 0){
                 if(xW !=0){
@@ -71,9 +83,12 @@ public class MyWorld extends World
                  getBackground().drawImage( img, 0, 0 );
                  player.setLocation(598,y);
                  removeObject( enemy );
+                 removeObject( treasure );
                  addObject( enemy_1, 500, 300 ); 
                  addObject( enemy_2, 500, 100 ); 
                  xW--;            
+                 Greenfoot.playSound();
+                 Greenfoot.playSound("sounds/Fight_or_Flight.mp3");
                 }              
             }
             if(x == 599){
@@ -82,10 +97,10 @@ public class MyWorld extends World
                  img.scale(600,435);
                  getBackground().drawImage( img, 0, 0 );
                  player.setLocation(1,y);
-
-                 addObject( enemy, 500, 200 ); 
+                 
                  addObject( treasure, 500, 300 ); 
-
+                 addObject( enemy, 500, 300 ); 
+                 
                  removeObject( enemy_1 );
                  removeObject( enemy_2 );
                  removeObject( enemy_1_2 );
@@ -93,7 +108,26 @@ public class MyWorld extends World
                  removeObject( enemy_1_3 );
                  removeObject( enemy_2_3 );
                  xW++;
+                 Greenfoot.playSound();
+                 Greenfoot.playSound("sounds/Battle-Unison.mp3");
+
                 }              
+            }
+            
+            if((enex==0)&&(ene2set==true))
+            {
+                removeObject( enemy_2 );
+                ene2set=false;
+            }
+            if((enex2==0)&&(ene2_2set==true))
+            {
+                removeObject( enemy_2_2 );
+                ene2_2set=false;
+            }
+            if((enex3==0)&&(ene2_3set==true))
+            {
+                removeObject( enemy_2_3 );
+                ene2_3set=false;
             }
                  
 

@@ -14,6 +14,8 @@ public class enemy_2 extends Actor
      * Act - do whatever the enemy_2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    boolean firstf=false;
+    int attack=0;
     public void act() 
     {
         int yp = PLAYER.y;
@@ -23,12 +25,19 @@ public class enemy_2 extends Actor
        
         int x = getX();
         int y = getY();
+        
+        
 
         if((xp<x+30)&&(xp>x-30))
         {   
             x=x-3;
-            if(y<yp) y=y+10;         
-            else      y=y-5; 
+            if(firstf==false)
+            {
+                if(y<yp) attack=10;         
+                else      attack=-5;
+                firstf=true;
+            }
+            y=y+attack;
 
         }
         else x=x-3;

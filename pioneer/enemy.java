@@ -36,7 +36,7 @@ public class enemy extends Actor
   
             if(count2==0)
             {                
-                if(count==24) 
+                if(count==48) 
                 {
                    count=0;
                    if(xp>=x) count2=1;
@@ -44,19 +44,20 @@ public class enemy extends Actor
                    {
                        if((yp-y)<=20) jump=10;
                        else           jump=30;
+                       
                    }
                    else               jump=3;
                 }
                 
                 setImage(right);
                 if(count<6)setLocation( x,y-jump );
-                else if(count<18)setLocation( x-6,y );
+                else if(count<18)setLocation( x-5,y );
                 else if(count<24)setLocation( x,y+jump );
                 count++;
             }
             else
             {    
-               if(count==24) 
+               if(count==48) 
                {
                    count=0;
                    if(xp<=x) count2=0;
@@ -64,13 +65,14 @@ public class enemy extends Actor
                    {
                        if((y-yp)<=10) jump=10;
                        else           jump=30;
+                       
                    }
                    else               jump=3;
                }
                
                setImage(left);
                 if(count<6)setLocation( x,y-jump );
-                else if(count<18)setLocation( x+6,y );
+                else if(count<18)setLocation( x+5,y );
                 else if(count<24)setLocation( x,y+jump );
                count++;
             }
