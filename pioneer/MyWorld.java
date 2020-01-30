@@ -25,7 +25,7 @@ public class MyWorld extends World
     boolean ene2set= true;
     boolean ene2_2set= true;
     boolean ene2_3set= true;
-    GreenfootSound bgSound1 = new GreenfootSound("sounds/Fight_or_Flight.mp3");
+    GreenfootSound bgSound1 = new GreenfootSound("sounds/bgm_maoudamashii_8bit27.mp3");
     GreenfootSound bgSound2 = new GreenfootSound("sounds/Battle-Unison.mp3");
     /**
      * Constructor for objects of class MyWorld.
