@@ -25,6 +25,8 @@ public class MyWorld extends World
     boolean ene2set= true;
     boolean ene2_2set= true;
     boolean ene2_3set= true;
+    GreenfootSound bgSound1 = new GreenfootSound("sounds/Fight_or_Flight.mp3");
+    GreenfootSound bgSound2 = new GreenfootSound("sounds/Battle-Unison.mp3");
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -60,7 +62,8 @@ public class MyWorld extends World
         img1.scale(600,435);
         getBackground().drawImage( img1, 0, 0 );
 
-    
+        bgSound2.stop();
+        bgSound1.play();
     }
     
      public void act() 
@@ -86,9 +89,9 @@ public class MyWorld extends World
                  removeObject( treasure );
                  addObject( enemy_1, 500, 300 ); 
                  addObject( enemy_2, 500, 100 ); 
-                 xW--;            
-                 Greenfoot.playSound();
-                 Greenfoot.playSound("sounds/Fight_or_Flight.mp3");
+                 xW--;         
+                 bgSound2.stop();
+                 bgSound1.play();
                 }              
             }
             if(x == 599){
@@ -108,8 +111,8 @@ public class MyWorld extends World
                  removeObject( enemy_1_3 );
                  removeObject( enemy_2_3 );
                  xW++;
-                 Greenfoot.playSound();
-                 Greenfoot.playSound("sounds/Battle-Unison.mp3");
+                 bgSound1.stop();
+                 bgSound2.play();
 
                 }              
             }
