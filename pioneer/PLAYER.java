@@ -82,15 +82,24 @@ public class PLAYER extends Actor
          //}
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
+=======
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
         if( life <= 0 ){  
             World game = new GAMEOVERWorld();
             Greenfoot.setWorld( game );
             //getWorld().showText( "GAME OVER", 300, 300 );
             Greenfoot.stop();
          }
+<<<<<<< HEAD
 >>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
+=======
+=======
+    
+>>>>>>> e80241da6c6a707baabd8a600ea6a8c23315c932
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
         String s=String.valueOf(life);
         getWorld().showText( "HP"+s, 100, 350 );
       }  

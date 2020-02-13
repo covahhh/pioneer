@@ -16,6 +16,7 @@ dependency10.from=PLAYER
 dependency10.to=enemy_2
 dependency10.type=UsesDependency
 <<<<<<< HEAD
+<<<<<<< HEAD
 dependency11.from=PLAYER
 dependency11.to=Block
 dependency11.type=UsesDependency
@@ -32,6 +33,8 @@ dependency15.from=enemy_1
 dependency15.to=PLAYER
 dependency15.type=UsesDependency
 =======
+=======
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
 dependency11.from=enemy_2
 dependency11.to=GifImage
 dependency11.type=UsesDependency
@@ -50,7 +53,27 @@ dependency15.type=UsesDependency
 dependency16.from=treasure
 dependency16.to=PLAYER
 dependency16.type=UsesDependency
+<<<<<<< HEAD
 >>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
+=======
+=======
+dependency11.from=PLAYER
+dependency11.to=Block
+dependency11.type=UsesDependency
+dependency12.from=enemy_2
+dependency12.to=GifImage
+dependency12.type=UsesDependency
+dependency13.from=enemy_2
+dependency13.to=PLAYER
+dependency13.type=UsesDependency
+dependency14.from=enemy_1
+dependency14.to=GifImage
+dependency14.type=UsesDependency
+dependency15.from=enemy_1
+dependency15.to=PLAYER
+dependency15.type=UsesDependency
+>>>>>>> e80241da6c6a707baabd8a600ea6a8c23315c932
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
 dependency2.from=MyWorld
 dependency2.to=treasure
 dependency2.type=UsesDependency
@@ -65,10 +88,17 @@ dependency5.to=enemy_2
 dependency5.type=UsesDependency
 dependency6.from=MyWorld
 <<<<<<< HEAD
+<<<<<<< HEAD
 dependency6.to=Wood
 =======
 dependency6.to=PLAYER
 >>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
+=======
+dependency6.to=PLAYER
+=======
+dependency6.to=Wood
+>>>>>>> e80241da6c6a707baabd8a600ea6a8c23315c932
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
 dependency6.type=UsesDependency
 dependency7.from=PLAYER
 dependency7.to=GAMEOVERWorld
@@ -80,6 +110,17 @@ dependency9.from=PLAYER
 dependency9.to=enemy_1
 dependency9.type=UsesDependency
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+height=585
+package.numDependencies=16
+package.numTargets=9
+=======
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
 editor.fx.0.height=739
 editor.fx.0.width=816
 editor.fx.0.x=881
@@ -87,6 +128,7 @@ editor.fx.0.y=99
 height=582
 package.numDependencies=15
 package.numTargets=10
+<<<<<<< HEAD
 =======
 editor.fx.0.height=693
 editor.fx.0.width=1190
@@ -96,6 +138,9 @@ height=585
 package.numDependencies=16
 package.numTargets=9
 >>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
+=======
+>>>>>>> e80241da6c6a707baabd8a600ea6a8c23315c932
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
 project.charset=windows-31j
 publish.hasSource=false
 publish.locked=true
@@ -161,10 +206,17 @@ target6.x=0
 target6.y=0
 target7.height=50
 <<<<<<< HEAD
+<<<<<<< HEAD
 target7.name=Block
 =======
 target7.name=treasure
 >>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
+=======
+target7.name=treasure
+=======
+target7.name=Block
+>>>>>>> e80241da6c6a707baabd8a600ea6a8c23315c932
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
 target7.showInterface=false
 target7.type=ClassTarget
 target7.width=80
@@ -172,10 +224,17 @@ target7.x=0
 target7.y=0
 target8.height=50
 <<<<<<< HEAD
+<<<<<<< HEAD
 target8.name=enemy
 =======
 target8.name=MyWorld
 >>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
+=======
+target8.name=MyWorld
+=======
+target8.name=enemy
+>>>>>>> e80241da6c6a707baabd8a600ea6a8c23315c932
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=80
@@ -183,21 +242,34 @@ target8.x=0
 target8.y=0
 target9.height=50
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+target9.name=GAMEOVERWorld
+target9.showInterface=false
+target9.type=ClassTarget
+target9.width=120
+=======
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
 target9.name=MyWorld
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=80
+<<<<<<< HEAD
 =======
 target9.name=GAMEOVERWorld
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=120
 >>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
+=======
+>>>>>>> e80241da6c6a707baabd8a600ea6a8c23315c932
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
 target9.x=0
 target9.y=0
 version=3.0.0
 width=891
 world.lastInstantiated=WorldTitle
+<<<<<<< HEAD
 <<<<<<< HEAD
 xPosition=185
 yPosition=186
@@ -205,3 +277,11 @@ yPosition=186
 xPosition=485
 yPosition=113
 >>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
+=======
+xPosition=485
+yPosition=113
+=======
+xPosition=185
+yPosition=186
+>>>>>>> e80241da6c6a707baabd8a600ea6a8c23315c932
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3

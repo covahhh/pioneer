@@ -37,11 +37,19 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
        
 =======
         treasure=new treasure();
 >>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
+=======
+        treasure=new treasure();
+=======
+
+       
+>>>>>>> e80241da6c6a707baabd8a600ea6a8c23315c932
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
         enemy= new enemy();
         enemy_1=new enemy_1();
         enemy_1_2=new enemy_1();
@@ -63,6 +71,10 @@ public class MyWorld extends World
         player = new PLAYER();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
         addObject( player, 300, 200 );
 
         for(int i = 0; i<5; i++){
@@ -71,8 +83,12 @@ public class MyWorld extends World
                
             
         }
+<<<<<<< HEAD
 =======
 >>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
+=======
+>>>>>>> e80241da6c6a707baabd8a600ea6a8c23315c932
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
 
         addObject( player, 10, 200 );
         GreenfootImage img1 = new GreenfootImage( "images/background4.png" );
@@ -111,6 +127,11 @@ public class MyWorld extends World
                  player.setLocation(598,y);
                  removeObject( enemy );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                 removeObject( treasure );
+=======
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
                  
                  for(int i = 0; i<5; i++){
            
@@ -119,9 +140,13 @@ public class MyWorld extends World
                 
             
                 }
+<<<<<<< HEAD
 =======
                  removeObject( treasure );
 >>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
+=======
+>>>>>>> e80241da6c6a707baabd8a600ea6a8c23315c932
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
                  addObject( enemy_1, 500, 300 ); 
                  addObject( enemy_2, 500, 100 ); 
                  xW--;         
@@ -136,6 +161,20 @@ public class MyWorld extends World
                  getBackground().drawImage( img, 0, 0 );
                  player.setLocation(1,y);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                 
+                 addObject( treasure, 500, 300 ); 
+                 addObject( enemy, 500, 300 ); 
+                 
+                 removeObject( enemy_1 );
+                 removeObject( enemy_2 );
+                 removeObject( enemy_1_2 );
+                 removeObject( enemy_2_2 );
+                 removeObject( enemy_1_3 );
+                 removeObject( enemy_2_3 );
+=======
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
                 // addObject( enemy, 500, 200 ); 
                  removeObject( enemy_1 );
                  removeObject( enemy_2 );
@@ -155,6 +194,7 @@ public class MyWorld extends World
                 addObject(block1[1],240,130);
                 addObject(block1[2],210,130);
                 addObject(block1[3],180,130);
+<<<<<<< HEAD
 =======
                  
                  addObject( treasure, 500, 300 ); 
@@ -167,6 +207,9 @@ public class MyWorld extends World
                  removeObject( enemy_1_3 );
                  removeObject( enemy_2_3 );
 >>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
+=======
+>>>>>>> e80241da6c6a707baabd8a600ea6a8c23315c932
+>>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
                  xW++;
                  bgSound1.stop();
                  bgSound2.play();
