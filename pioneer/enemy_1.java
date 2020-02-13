@@ -25,22 +25,13 @@ public class enemy_1 extends Actor
         int x = getX();
         int y = getY();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
+
 
         setLocation( x-2,y );
             
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
-=======
->>>>>>> e80241da6c6a707baabd8a600ea6a8c23315c932
->>>>>>> af453d40555f6f25dba1e4ee180663ebcb4c55e3
+
         int speed=1;
         //if     ((xp<x+5)&&(xp>x-5)) speed=2;
         //else                          speed=1;
