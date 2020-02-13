@@ -12,6 +12,7 @@ public class MyWorld extends World
 {
     Actor player = null;
     Actor enemy  = null;
+    Actor treasure = null;
     Actor enemy_1  = null;
     Actor enemy_1_2  = null;
     Actor enemy_1_3  = null;
@@ -22,6 +23,11 @@ public class MyWorld extends World
     String[][] nowWorld = new String[2][2];
     int xW=0;
     int yW=0;
+    boolean ene2set= true;
+    boolean ene2_2set= true;
+    boolean ene2_3set= true;
+    GreenfootSound bgSound1 = new GreenfootSound("sounds/bgm_maoudamashii_8bit27.mp3");
+    GreenfootSound bgSound2 = new GreenfootSound("sounds/Battle-Unison.mp3");
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -30,8 +36,12 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
+<<<<<<< HEAD
 
        
+=======
+        treasure=new treasure();
+>>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
         enemy= new enemy();
         enemy_1=new enemy_1();
         enemy_1_2=new enemy_1();
@@ -52,6 +62,7 @@ public class MyWorld extends World
         
         player = new PLAYER();
 
+<<<<<<< HEAD
         addObject( player, 300, 200 );
 
         for(int i = 0; i<5; i++){
@@ -60,7 +71,10 @@ public class MyWorld extends World
                
             
         }
+=======
+>>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
 
+        addObject( player, 10, 200 );
         GreenfootImage img1 = new GreenfootImage( "images/background4.png" );
 
         addObject( player, 10, 200 );
@@ -68,13 +82,26 @@ public class MyWorld extends World
         img1.scale(600,435);
         getBackground().drawImage( img1, 0, 0 );
 
+<<<<<<< HEAD
  
+=======
+        bgSound2.stop();
+        bgSound1.play();
+>>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
     }
     
      public void act() 
     {
-            int x = player.getX();
-            int y = player.getY();
+            int x    = player.getX();
+            int y    = player.getY();
+            int enex=0; 
+            int enex2=0; 
+            int enex3=0; 
+            if(ene2set==true)   enex  = enemy_2.getX();
+            if(ene2_2set==true) enex2 = enemy_2_2.getX();
+            if(ene2_3set==true) enex3 = enemy_2_3.getX();
+            
+            
             
             if(x == 0){
                 if(xW !=0){
@@ -83,6 +110,7 @@ public class MyWorld extends World
                  getBackground().drawImage( img, 0, 0 );
                  player.setLocation(598,y);
                  removeObject( enemy );
+<<<<<<< HEAD
                  
                  for(int i = 0; i<5; i++){
            
@@ -91,9 +119,14 @@ public class MyWorld extends World
                 
             
                 }
+=======
+                 removeObject( treasure );
+>>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
                  addObject( enemy_1, 500, 300 ); 
                  addObject( enemy_2, 500, 100 ); 
-                 xW--;            
+                 xW--;         
+                 bgSound2.stop();
+                 bgSound1.play();
                 }              
             }
             if(x == 599){
@@ -102,6 +135,7 @@ public class MyWorld extends World
                  img.scale(600,435);
                  getBackground().drawImage( img, 0, 0 );
                  player.setLocation(1,y);
+<<<<<<< HEAD
                 // addObject( enemy, 500, 200 ); 
                  removeObject( enemy_1 );
                  removeObject( enemy_2 );
@@ -121,11 +155,42 @@ public class MyWorld extends World
                 addObject(block1[1],240,130);
                 addObject(block1[2],210,130);
                 addObject(block1[3],180,130);
+=======
+                 
+                 addObject( treasure, 500, 300 ); 
+                 addObject( enemy, 500, 300 ); 
+                 
+                 removeObject( enemy_1 );
+                 removeObject( enemy_2 );
+                 removeObject( enemy_1_2 );
+                 removeObject( enemy_2_2 );
+                 removeObject( enemy_1_3 );
+                 removeObject( enemy_2_3 );
+>>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
                  xW++;
+                 bgSound1.stop();
+                 bgSound2.play();
+
                 }              
+            }
+            
+            if((enex==0)&&(ene2set==true))
+            {
+                removeObject( enemy_2 );
+                ene2set=false;
+            }
+            if((enex2==0)&&(ene2_2set==true))
+            {
+                removeObject( enemy_2_2 );
+                ene2_2set=false;
+            }
+            if((enex3==0)&&(ene2_3set==true))
+            {
+                removeObject( enemy_2_3 );
+                ene2_3set=false;
             }
                  
 
-            showText( ""+x+","+y+","+xW, 100, 50 );
+            
     }    
 }

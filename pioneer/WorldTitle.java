@@ -23,6 +23,7 @@ public class WorldTitle extends World
     if( Greenfoot.isKeyDown( "Z" ) ){
         World game = new MyWorld();
         Greenfoot.setWorld( game );
+        Greenfoot.playSound("sounds/start.mp3");
     }
 }
 }

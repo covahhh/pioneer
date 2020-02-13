@@ -13,7 +13,7 @@ public class enemy extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int count=0,count2=1;
-    
+    int jump=3;
     private  GreenfootImage left  = null;
     private  GreenfootImage right = null;
     
@@ -29,35 +29,52 @@ public class enemy extends Actor
     { 
         int x = getX();
         int y = getY();
-
+        int yp = PLAYER.y;
+        int xp = PLAYER.x;
+        
             
   
-            if(count2<=5)
-            {
-                setImage(right);
-                if(count<6)setLocation( x,y+3 );
-                else if(count<12)setLocation( x,y-3 );
-                else if(count<24)setLocation( x-6,y );
-                count++;
-                if(count==24) 
+            if(count2==0)
+            {                
+                if(count==48) 
                 {
-                    count=0;
-                    count2++;
+                   count=0;
+                   if(xp>=x) count2=1;
+                   if((xp<x+30)&&(xp>x-30)) 
+                   {
+                       if((yp-y)<=20) jump=10;
+                       else           jump=30;
+                       
+                   }
+                   else               jump=3;
                 }
+                
+                setImage(right);
+                if(count<6)setLocation( x,y-jump );
+                else if(count<18)setLocation( x-5,y );
+                else if(count<24)setLocation( x,y+jump );
+                count++;
             }
             else
-            {
+            {    
+               if(count==48) 
+               {
+                   count=0;
+                   if(xp<=x) count2=0;
+                   if((xp<x+30)&&(xp>x-30)) 
+                   {
+                       if((y-yp)<=10) jump=10;
+                       else           jump=30;
+                       
+                   }
+                   else               jump=3;
+               }
+               
                setImage(left);
-               if(count<6)setLocation( x,y+3 );
-               else if(count<12)setLocation( x,y-3 );
-               else if(count<24)setLocation( x+6,y );
+                if(count<6)setLocation( x,y-jump );
+                else if(count<18)setLocation( x+5,y );
+                else if(count<24)setLocation( x,y+jump );
                count++;
-               if(count==24) 
-                {
-                    count=0;
-                    count2++;
-                    if(count2>10)count2=1;
-                }
             }
         
            

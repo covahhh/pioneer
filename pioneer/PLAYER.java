@@ -71,16 +71,26 @@ public class PLAYER extends Actor
         Actor actor3 = getOneObjectAtOffset( 0, 0, enemy_2.class );
         
         if( actor != null ||actor2 != null||actor3 != null){
+        /*if( life <= 0 ){  
+            World game = new GAMEOVERWorld();
+            Greenfoot.setWorld( game );
+            //getWorld().showText( "GAME OVER", 300, 300 );
+            Greenfoot.stop();
+         }else{*/
+            life--;
+            Greenfoot.playSound("sounds/gusari.mp3");
+         //}
+        }
+<<<<<<< HEAD
+    
+=======
         if( life <= 0 ){  
             World game = new GAMEOVERWorld();
             Greenfoot.setWorld( game );
             //getWorld().showText( "GAME OVER", 300, 300 );
             Greenfoot.stop();
-         }else{
-            life--;
          }
-        }
-    
+>>>>>>> 5d39885627ff6615fc0e216af7e402d5ac1475fd
         String s=String.valueOf(life);
         getWorld().showText( "HP"+s, 100, 350 );
       }  
